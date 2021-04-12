@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>Mobiscroll Test</title>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+	<style>
+	.myClass{
+		    margin: 10px auto;
+    width: 500px;
+    height: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+	}
+	.md-card-bg .md-card-subtitle,
+	.md-card-bg .md-card-title {
+		position: absolute;
+		top: 50%;
+		color: #fff;
+		width: 100%;
+	}
+
+	.md-card-bg .md-card-title {
+		margin-top: -30px;
+	}
+
+	.md-card-bg .md-card-subtitle {
+		margin-top: 10px;
+	}
+	</style>
+</head>
+
+<body>
+  
+    <!-- This is where you put the HTML markup :) -->
+<div class="mbsc-col-sm-12 mbsc-col-md-6">
+                <label>
+                    Mobile
+                    <select mbsc-dropdown id="demo-mobile" data-input-style="box">
+                        <option value="1" >Atlanta</option>
+                        <option value="2">Berlin</option>
+                        <option value="3">Boston</option>
+                        <option value="4">Chicago</option>
+                        <option value="5">London</option>
+                        <option value="6">Los Angeles</option>
+                        <option value="7">New York</option>
+                        <option value="8">Paris</option>
+                        <option value="9">San Francisco</option>
+                    </select>
+                </label>
+            </div>
+            <div class="mbsc-col-sm-12 mbsc-col-md-6">
+                <label>
+                    Desktop
+                    <select mbsc-dropdown id="demo-desktop" data-input-style="box">
+                        <option value="1">Atlanta</option>
+                        <option value="2">Berlin</option>
+                        <option value="3">Boston</option>
+                        <option value="4">Chicago</option>
+                        <option value="5">London London</option>
+                        <option value="6">Los Angeles</option>
+                        <option value="7">New York</option>
+                        <option value="8">Paris</option>
+                        <option value="9">San Francisco</option>
+                    </select>
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    NumberPicker
+                    <input id="numberPicker" >
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    NumberPickerDecimal
+                    <input id="numberPickerDecimal" >
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    DateTime
+                    <input id="datetime" >
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    Date
+                    <input id="date" >
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    Day Month
+                    <input id="daymonth" >
+                </label>
+            </div>
+			<span></span>
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    Month Year
+                    <input id="monthyear" >
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    Month
+                    <input id="month" >
+                </label>
+            </div>
+			
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    Year
+                    <input id="year" >
+                </label>
+            </div>
+			<div class="mbsc-col-sm-12 mbsc-col-md-6 myClass">
+                <label>
+                    Time
+                    <input id="time" >
+                </label>
+            </div>
+    <script>
+    // This is where you put the javascript code
+
+
+		mobiscroll.settings = {
+			theme: 'ios',
+			themeVariant: 'light'
+		};
+
+		mobiscroll.datetime('#time',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		mobiscroll.datetime('#year',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		mobiscroll.datetime('#month',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		mobiscroll.datetime('#monthyear',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		mobiscroll.datetime('#daymonth',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		 mobiscroll.datetime('#date',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		 mobiscroll.datetime('#datetime',{
+			 //dateWheels: '|D M d|',
+			 //lang:"vietnam",
+			 dateFormat: 'd/mm/yy',
+			//dateFormat:'d/mm/yyyy', 
+			timeFormat:'H:ii' ,
+			});
+		
+		mobiscroll.number('#numberPicker', {
+			display: 'bubble',
+			value:'Boston',  
+			step: 1,
+    min: 1,
+    max: 20,
+		});
+
+		mobiscroll.number('#numberPickerDecimal', {
+			display: 'bubble',
+			value:'Boston',  
+			
+		});
+
+		
+		mobiscroll.select('#demo-mobile', {
+			value:'Boston',
+		});
+
+		mobiscroll.select('#demo-desktop', {
+		filter: true,
+			display: 'bubble',
+			touchUi: false
+		});
+		let listScroll = [{id:"demo-mobile",lib:'listSelect'},
+		{id:"demo-desktop",lib:'listSelect'},
+		{id:"numberPicker",lib:'number'},
+		{id:"numberPickerDecimal",lib:'number'},
+		{id:"datetime",lib:'datetime'},
+		{id:"date",lib:'date'},
+		{id:"daymonth",lib:'daymonth'},
+		{id:"monthyear",lib:'monthyear'},
+		{id:"month",lib:'month'},
+		{id:"year",lib:'year'},
+		{id:"time",lib:'time'},
+		{id:"card",lib:'card'},
+		];
+		localStorage.setItem('language','vietnam');
+		localStorage.setItem('listScroll1',JSON.stringify(listScroll));
+			</script>
+
+</body>
+
+</html>
